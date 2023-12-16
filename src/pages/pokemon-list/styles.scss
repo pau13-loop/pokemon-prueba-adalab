@@ -1,0 +1,23 @@
+@use '../../index.scss';
+
+.container {
+  overflow-y: scroll;
+}
+
+.container {
+  /* Internet Explorer 10+ */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}
+
+.cardContainer {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
