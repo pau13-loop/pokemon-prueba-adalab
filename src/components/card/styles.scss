@@ -1,0 +1,63 @@
+@use '../../index.scss';
+
+.card {
+  background-color: index.$white;
+  min-width: 185px;
+}
+
+.card:hover {
+  opacity: 0.8;
+  cursor: grab;
+}
+
+// Card Top
+.cardTop {
+  background-color: index.$grey;
+}
+
+.imgCard {
+  height: -webkit-fill-available;
+  width: auto;
+}
+
+.titleTop {
+  background-color: index.$darkGrey;
+  width: fit-content;
+  padding: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+// Card Bottom
+.titleBottom {
+  color: index.$black;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.containerTypes {
+  gap: 5px;
+}
+
+.type {
+  color: index.$darkGrey;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 2px;
+  
+}
+
+.hightLight {
+  border-left: 3px solid index.$hightLight;
+  margin-top: 15px;
+}
+
+.evolutionLabel {
+color: index.$darkGrey;
+margin: 0px 0px 0px 5px;
+}
+
+.evolutionValue {
+color: index.$black;
+margin: 0px 0px 0px 5px;
+}
