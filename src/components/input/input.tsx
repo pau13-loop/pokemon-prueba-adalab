@@ -16,7 +16,7 @@ const Input: FC<IProps> = (props) => {
 
   const handleFilterValue = (event: any) => {
     setFilterValue(event.target.value);
-    onInput(event);
+    onInput(event.target.value);
   };
 
   return (
@@ -26,7 +26,7 @@ const Input: FC<IProps> = (props) => {
       type={inputType}
       onInput={handleFilterValue}
       placeholder={placeholder}
-      className="w-85 h3 textCenter fs-md input"
+      className="w-100 h-3 textCenter fs-md input"
     />
   )
 };
