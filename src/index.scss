@@ -4,10 +4,11 @@
 $white: #fff;
 $black: #000;
 $grey: #DFDFDF;
+$darkGrey: grey;
 
 $primary: #FFE72B;
 $secondary: #EA2A2A;
-$higlight: #60381D;
+$hightLight: #60381D;
 
 // BASE STYLES
 html,
@@ -90,42 +91,65 @@ body {
   width: 100%;
 }
 
-.w-85 {
-  width: 85%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-25 {
-  width: 25%;
+.w-80 {
+  width: 80%;
 }
 
 .h-100 {
   height: 100%;
 }
 
-.h3 {
+.h-50 {
+  height: 50%;
+}
+
+.h-3 {
   height: 3rem;
 }
 
-// Flex Section
-.flex {
-  display: flex;
+.mh-1000 {
+  max-height: 1000px;
 }
 
+// Margin & Padding
+.m-0 {
+  margin: 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+// Flex Section
 .flexRow {
+  display: flex;
   flex-direction: row;
 }
 
 .flexCol {
+  display: flex;
   flex-direction: column;
 }
 
 .flexCenter {
   justify-content: center;
   align-items: center;
+}
+
+.g-1 {
+  gap: 1rem;
 }
 
 // Text Styles
@@ -135,10 +159,24 @@ body {
 
 // Font Sizes
 
+.fs-xs {
+  font-size: 0.8rem;
+}
+
 .fs-md {
   font-size: 1.5rem;
 }
 
-.fs-xl {
+.fs-lg {
   font-size: 2rem;
+}
+
+// Position
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }

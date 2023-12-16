@@ -5,7 +5,7 @@ const ErrorPage = () => {
   console.error(error);
 
   return (
-    <div id="error-page" className="w-100 h-100 flex flexCol flexCenter">
+    <div id="error-page" className="w-100 h-100 flexCol flexCenter">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
