@@ -1,0 +1,13 @@
+@use '../../index';
+
+.input {
+  background-color: index.$white;
+  color: index.$black;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px 2px, rgba(0, 0, 0, 0.19) 0px 0px 3px 0px;
+}
+
+.input::placeholder {
+  opacity: 0.5;
+  color: grey;
+}
