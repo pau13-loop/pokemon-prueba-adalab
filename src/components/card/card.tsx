@@ -4,6 +4,7 @@ import './styles.scss';
 
 interface IProps {
   pokemon: IPokemon;
+  onSelectCard?: (id: number) => void;
 }
 
 const CardTop: FC<IProps> = (props) => {
@@ -51,10 +52,10 @@ const CardBottom: FC<IProps> = (props) => {
 }
 
 const Card: FC<IProps> = (props) => {
-  const { pokemon } = props;
+  const { pokemon, onSelectCard } = props;
 
   return (
-    <div className="flexCol card">
+    <div className="flexCol card" onClick={() => onSelectCard && onSelectCard(pokemon.id)}>
       <CardTop pokemon={pokemon} />
       <CardBottom pokemon={pokemon} />
     </div>

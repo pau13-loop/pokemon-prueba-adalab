@@ -4,14 +4,20 @@ import { Card } from "../../components/card";
 import { useState } from "react";
 import './styles.scss';
 import { Spinner } from "../../components/spinner";
+import { useNavigate } from "react-router-dom";
 
 const PokemonList = () => {
+  const navigate = useNavigate();
   const { countPokemonList, pokemonList, loading } = useLoadPokemons();
   const [filterValue, setFilterValue] = useState<string>('');
 
   const handleFilter = (value: string) => {
     setFilterValue(value);
   }
+
+  const handleSelectCard = (id: number) => {
+    navigate(`/${id}`);
+  };
 
   if (loading) { return <Spinner /> }
   else if (countPokemonList === 0) { return <p>No se han podido encontrar pokemons</p> }
@@ -30,7 +36,7 @@ const PokemonList = () => {
           {pokemonList.map((pokemon) => {
             if (filterValue === '' || pokemon.name.startsWith(filterValue))
               return (
-                <Card key={`${pokemon.name}_${pokemon.id}`} pokemon={pokemon} />
+                <Card key={`${pokemon.name}_${pokemon.id}`} pokemon={pokemon} onSelectCard={handleSelectCard} />
               )
           })}
         </div>
