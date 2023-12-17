@@ -1,0 +1,12 @@
+@use '../../index.scss';
+
+.containerTableHeader {
+  background-color: index.$grey;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+}
+
+.textElementTable {
+  border: 1px solid black;
+  word-wrap: break-word;
+}
