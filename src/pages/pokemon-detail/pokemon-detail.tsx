@@ -1,7 +1,10 @@
+// LIBRARY IMPORTS
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+// LOCAL IMPORTS
 import { Table, TableHeader, TextElementTable } from '../../components/table/table';
 import PokemonGateway from '../../gateways/pokemons';
+// STYLES IMPORTS
 import './styles.scss';
 
 interface PokemonDetail {

@@ -1,10 +1,13 @@
-import { Input } from "../../components/input";
-import useLoadPokemons from "../../hooks/load-pokemons-hook";
-import { Card } from "../../components/card";
+// LIBRARY IMPORTS
 import { useState } from "react";
-import './styles.scss';
-import { Spinner } from "../../components/spinner";
 import { useNavigate } from "react-router-dom";
+// LOCAL IMPORTS
+import { Input } from "../../components/input";
+import { Card } from "../../components/card";
+import { Spinner } from "../../components/spinner";
+import useLoadPokemons from "../../hooks/load-pokemons-hook";
+// STYLES IMPORTS
+import './styles.scss';
 
 const PokemonList = () => {
   const navigate = useNavigate();
@@ -32,7 +35,7 @@ const PokemonList = () => {
       </div>
 
       <div className="mh-1000 w-80 container">
-        <div className="flexRow g-1 cardContainer">
+        <div className="g-1 flexRow flexWrap cardContainer">
           {pokemonList.map((pokemon) => {
             if (filterValue === '' || pokemon.name.startsWith(filterValue))
               return (
