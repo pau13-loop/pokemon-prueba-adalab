@@ -1,7 +1,6 @@
-
 const PokemonGateway = () => {
   const getAllPokeomons = async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const response = await fetch(`${process.env.POKEMON_API_BASE_URL}/pokemon?limit=151`);
 
     if (!response.ok || response.status !== 200) return;
 
@@ -19,7 +18,7 @@ const PokemonGateway = () => {
   };
 
   const getPokemonSpecieById = async (idPokemon: number) => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${idPokemon}`);
+    const response = await fetch(`${process.env.POKEMON_API_BASE_URL}/pokemon-species/${idPokemon}`);
 
     if (!response.ok || response.status !== 200) return;
 
@@ -28,7 +27,7 @@ const PokemonGateway = () => {
   };
 
   const getPokemonById = async (id: string) => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const response = await fetch(`${process.env.POKEMON_API_BASE_URL}/pokemon/${id}`);
 
     if (!response.ok || response.status !== 200) return;
 
