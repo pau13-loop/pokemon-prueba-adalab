@@ -6,35 +6,12 @@ import { Table, TableHeader, TextElementTable } from '../../components/table/tab
 import PokemonGateway from '../../gateways/pokemons';
 // STYLES IMPORTS
 import './styles.scss';
-
-interface PokemonDetail {
-  name: string;
-  weight: number;
-  height: number;
-  sprites: {
-    front_default: string;
-    back_default: string;
-    back_shiny: string;
-    front_shiny: string;
-  };
-  moves: {
-    move: {
-      name: string;
-      url: string;
-    }
-  }[];
-  abilities: {
-    ability: {
-      name: string;
-      url: string;
-    }
-  }[];
-}
+import { IPokemonDetail } from '../../interfaces/pokemon';
 
 const PokemonDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  const [pokemon, setPokemon] = useState<PokemonDetail | null>(null);
+  const [pokemon, setPokemon] = useState<IPokemonDetail | null>(null);
 
   useEffect(() => {
     if (!id) {

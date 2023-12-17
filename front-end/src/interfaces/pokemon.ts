@@ -13,3 +13,27 @@ export interface IPokemonType {
     url: string
   }
 }
+
+export interface IPokemonDetail {
+  name: string;
+  weight: number;
+  height: number;
+  sprites: {
+    front_default: string;
+    back_default: string;
+    back_shiny: string;
+    front_shiny: string;
+  };
+  moves: {
+    move: {
+      name: string;
+      url: string;
+    }
+  }[];
+  abilities: {
+    ability: {
+      name: string;
+      url: string;
+    }
+  }[];
+}
