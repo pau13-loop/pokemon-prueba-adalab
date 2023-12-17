@@ -1,0 +1,15 @@
+@use '../../index.scss';
+
+.containerPokemonDetail {
+  border: 1px solid black;
+  background-color: index.$white;
+  overflow-y: scroll;
+}
+
+.containerImages {
+  border-bottom: 1px solid black;
+}
+
+.containerText {
+  border-left: 1px solid black;
+}
