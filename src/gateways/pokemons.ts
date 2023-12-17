@@ -27,10 +27,20 @@ const PokemonGateway = () => {
     return data;
   };
 
+  const getPokemonById = async (id: string) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+
+    if (!response.ok || response.status !== 200) return;
+
+    const data = await response.json();
+    return data;
+  };
+
   return {
     getAllPokeomons,
     getPokemonByUrl,
-    getPokemonSpecieById
+    getPokemonSpecieById,
+    getPokemonById
   }
 }
 
