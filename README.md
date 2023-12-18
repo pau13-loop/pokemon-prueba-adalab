@@ -15,6 +15,7 @@ Agradezco de antemano la oportunidad concedida y muchas gracias por todo.
 ## Table of Contents
 
   - [Motivación](#motivación)
+  - [Netlify](#netlify)
   - [Objetivos](#objetivos)
   - [Tecnologías Implementadas](#tecnologías-implementadas)
   - [Instalación](#instalación)
@@ -25,6 +26,21 @@ Agradezco de antemano la oportunidad concedida y muchas gracias por todo.
 La vacante actual se alinea perfectamente con mis tecnologías favoritas en el mundo de la programación. Desde mis primeros pasos como programador, he cultivado una fuerte afinidad por trabajar con JavaScript y TypeScript, explorando todos sus matices para perfeccionar mis habilidades y convertirme en un desarrollador destacado.
 
 Tras completar mis estudios, siempre he aspirado a orientar mi carrera profesional hacia la docencia en el ámbito de la programación. Mi deseo es compartir mi pasión por este oficio y contribuir al crecimiento y desarrollo de futuros profesionales en este fascinante campo.
+
+---
+
+**[⬆ back to top](#table-of-contents)**
+
+## Netlify
+
+La implementación del módulo de front-end del proyecto ha sido desplegada en Netlify, utilizando la API pública de Pokémon como fuente de datos. Puede ser consultada sin la necesidad de seguir los pasos de instalación detallados más adelante. A continuación, se proporciona la URL a la cual puede acceder desde cualquier navegador para visualizar el listado y los detalles de los Pokémon:
+
+`https://adalab-pokemon.netlify.app/`
+
+
+---
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Objetivos
 
@@ -128,10 +144,11 @@ Error: http://localhost:3000/asda
 
 Listado pokemons: http://localhost:3000/pokemon
 
-Detalle pokemon: http://localhost:3000/pokemon/bulbasaur
+Detalle pokemon:  http://localhost:3000/pokemon/bulbasaur
 
-Especies pokemon: http://localhost:3000/pokemon/species/ivysaur
-
+Especies pokemon: http://localhost:3000/pokemon/species/bulbasaur
+                  http://localhost:3000/pokemon/species/ivysaur
+                  http://localhost:3000/pokemon/species/venusaur
 ```
 
 En el proyecto del Back End, también se proporciona un comando para ejecutar las migraciones que incluye el proyecto, permitiendo así poblar la base de datos.
