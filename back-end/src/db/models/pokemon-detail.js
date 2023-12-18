@@ -7,11 +7,11 @@ const PokemonDetailSchema = new Schema({
     required: true
   },
   weight: {
-    type: number,
+    type: Number,
     required: true
   },
   height: {
-    type: number,
+    type: Number,
     required: true
   },
   sprites: {

@@ -1,18 +1,18 @@
 module.exports = [
   {
     "name": "bulbasaur",
-    "evolves_from_species": null,
+    "evolves": null,
   },
   {
     "name": "ivysaur",
-    "evolves_from_species": {
+    "evolves": {
       "name": "bulbasaur",
       "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
     }
   },
   {
     "name": "venusaur",
-    "evolves_from_species": {
+    "evolves": {
       "name": "ivysaur",
       "url": "https://pokeapi.co/api/v2/pokemon-species/2/"
     },

@@ -1,4 +1,6 @@
 const Pokemon = require('../db/models/pokemon');
+const PokemonDetail = require('../db/models/pokemon-detail');
+const PokemonSpecies = require('../db/models/pokemon-species');
 
 const PokemonRepositoryAPI = (function singletonPokemonRepository() {
 
@@ -8,12 +10,12 @@ const PokemonRepositoryAPI = (function singletonPokemonRepository() {
   }
 
   const getOnePokemon = async (name) => {
-    const response = await Pokemon.find({ name }).exec();
+    const response = await PokemonDetail.find({ name }).exec();
     return response;
   }
 
   const getPokemonSpecies = async (name) => {
-    const response = await Pokemon.find({ name }).exec();
+    const response = await PokemonSpecies.find({ name }).exec();
     return response;
   }
 

@@ -6,7 +6,7 @@ const pokemonAPI = (function singletonPokemonAPI() {
   const getAllPokemons = ((req, res, next) => {
     pokemonRepositoryAPI.PokemonRepositoryAPI.getAllPokemons()
       .then(pokemons => {
-        const response = responseFormatter(null, pokemons, 'Request pokemons findAll successful');
+        const response = responseFormatter(null, pokemons, 'Request pokemons getAll successful');
         res.status(200).type('json').json(response);
       })
       .catch(err => {
@@ -16,9 +16,11 @@ const pokemonAPI = (function singletonPokemonAPI() {
   });
 
   const getOnePokemon = ((req, res, next) => {
+    console.log('Entro dentro de getOnePokemon')
     pokemonRepositoryAPI.PokemonRepositoryAPI.getOnePokemon(req.params.name)
       .then(pokemon => {
-        const response = responseFormatter(null, pokemon, 'Request pokemons findAll successful');
+        console.log(pokemon);
+        const response = responseFormatter(null, pokemon, 'Request pokemons getOnePokemon successful');
         res.status(200).type('json').json(response);
       })
       .catch(err => {
@@ -28,9 +30,11 @@ const pokemonAPI = (function singletonPokemonAPI() {
   });
 
   const getPokemonSpecies = ((req, res, next) => {
+    console.log('Entro dentro getPokemonSpecies')
     pokemonRepositoryAPI.PokemonRepositoryAPI.getPokemonSpecies(req.params.name)
       .then(pokemon => {
-        const response = responseFormatter(null, pokemon, 'Request pokemons findAll successful');
+        console.log(pokemon);
+        const response = responseFormatter(null, pokemon, 'Request pokemons getPokemonSpecies successful');
         res.status(200).type('json').json(response);
       })
       .catch(err => {

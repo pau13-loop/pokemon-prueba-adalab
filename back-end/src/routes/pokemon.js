@@ -12,7 +12,7 @@ router.use(function (req, res, next) {
 });
 
 //* CATEGORY ROUTES *//
-router.get('/', PokemonController.pokemonAPI.getAllPokemons);
+router.get('/pokemon', PokemonController.pokemonAPI.getAllPokemons);
 router.get('/:name', PokemonController.pokemonAPI.getOnePokemon);
 router.get('/species/:name', PokemonController.pokemonAPI.getPokemonSpecies);
 

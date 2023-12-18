@@ -6,14 +6,14 @@ const PokemonSpecieSchema = new Schema({
     type: String,
     required: true
   },
-  evolvesFrom: {
+  evolves: {
     type: Object,
     required: true
   }
 });
 
 PokemonSpecieSchema.pre(['find'], function () {
-  this.select('_id name evolvesFrom');
+  this.select('_id name evolves');
 });
 
 module.exports = mongoose.model('pokemon-species', PokemonSpecieSchema, 'pokemon-species');
